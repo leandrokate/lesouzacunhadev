@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Work = () => {
-  return <div>Work</div>;
+  return <div id='work' className='section'>Projetos</div>;
 };
 
 export default Work;
