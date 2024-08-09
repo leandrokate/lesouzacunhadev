@@ -10,14 +10,13 @@ const Banner = () => {
     <section id='home' className='min-h-[85vh] lg:min-h-[78vh] flex items-center'>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-8 lg:flex-row lg:items-center lg:gap-x-12'> 
-          {/* { TEXTO } */}
           <div className='flex-1 text-center font-secundary lg:text-left'>
             <motion.h1 
             variants={fadeIn('up', 0.3)} 
             initial="hidden" 
             whileInView={'show'}
             viewport={{once: false, amount: 0.7}}
-            className='text-[50px] font-bold leading-[0.8] lg:text-[110px]'>
+            className='text-[50px] font-bold leading-[0.8] lg:text-[75px] mb-4'>
               Leandro <span>Cunha</span>
             </motion.h1>
             <motion.div 
@@ -25,7 +24,7 @@ const Banner = () => {
               initial="hidden" 
               whileInView={'show'}
               viewport={{once: false, amount: 0.7}}
-              className='mb-6 text-[36px] lg:text[60px] font-secondary font-semibold uppercase leading-[1]'>
+              className='mb-6 text-[36px] lg:text[50px] font-secondary font-semibold uppercase leading-[1]'>
                 <span className='text-white mr-4'>Eu sou um</span>
                 <TypeAnimation sequence={[
                   'Developer', 2000,
@@ -43,7 +42,7 @@ const Banner = () => {
               initial="hidden" 
               whileInView={'show'}
               viewport={{once: false, amount: 0.7}}
-              className='mb-8 max-x-lg mx-auto lg:mx-0'>
+              className='mb-8 max-w-lg mx-auto lg:mx-0'>
               Estou em uma transição de carreira de Especialista em Infraestrutura de TI para Desenvolvedor FullStack, conheço muito afundo sobre servidores e Web e estou adquirindo conhecimento em Programação para essa transição!
             </motion.p>
             <motion.div 
@@ -53,9 +52,8 @@ const Banner = () => {
               viewport={{once: false, amount: 0.7}}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
               <button className='btn btn-lg'>Entre em contato</button>
-              <a href='#' className='text-gradient btn-link' >Meu Portfólio</a>
+              <a href='#' className='text-gradient btn-link'>Meu Portfólio</a>
             </motion.div>
-            {/* { LINKS } */}
             <motion.div 
               variants={fadeIn('up', 0.7)} 
               initial="hidden" 
@@ -73,16 +71,14 @@ const Banner = () => {
               </a>
             </motion.div>
           </div>
-        </div>
-        
-        {/* { IMAGEM } */}
-        <motion.div 
-          variants={fadeIn('down', 0.5)} 
-          initial="hidden" 
-          whileInView={'show'}
-          className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[480px]'>
-          <img src={Image} alt='' />
+          <motion.div 
+            variants={fadeIn('down', 0.5)} 
+            initial="hidden" 
+            whileInView={'show'}
+            className='hidden lg:flex flex-1 max-w-[320px] lg:max-w-[480px]'>
+            <img src={Image} alt='' />
         </motion.div>
+        </div>
       </div>
     </section>
   ); 
