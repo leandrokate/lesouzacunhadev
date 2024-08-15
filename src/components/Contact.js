@@ -1,4 +1,5 @@
 import React from 'react';
+import emailjs from '@emailjs/browser'
 
 import { useState } from 'react'
 import { motion } from "framer-motion";
@@ -18,7 +19,21 @@ const Contact = () => {
       return;
     }
 
-    alert("Teste")
+    const templateParams = {
+      from_name: name,
+      message: message,
+      email: email
+    }
+
+    emailjs.send("service_tiq05wk", "template_5d0ey68", templateParams, "f5MLHV8UFc2_HR5it")
+    .then(() => {
+      console.log("Email Enviado!!!")
+      setName('')
+      setEmail('')
+      setMessage('')
+    }, (err) => {
+      console.log("Erro: ", err)
+    })
   }
 
   return (

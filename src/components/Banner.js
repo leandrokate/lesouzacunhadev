@@ -29,7 +29,7 @@ const Banner = () => {
                 <TypeAnimation sequence={[
                   'Developer', 2000,
                   'Designer', 2000,
-                  'Dad', 2000,
+                  // 'Dad', 2000,
                 ]}
                 speed={50} 
                 className='text-accent'
