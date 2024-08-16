@@ -63,7 +63,7 @@
     @apply text-base;
   }
   .text-gradient {
-    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#00A000] to-[#2D3142] font-bold font-primary hover:from-[#2D3142] hover:to-[#00A000];
+    @apply bg-gradient-to-r text-transparent bg-clip-text from-[#00A000] to-[#00AFEF] font-bold font-primary hover:from-[#00AFEF] hover:to-[#00A000];
   }
   .section {
     @apply py-8 lg:py-24 lg:h-screen flex items-center;
