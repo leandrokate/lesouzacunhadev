@@ -3,6 +3,7 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { useInView } from 'react-intersection-observer';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll'
 import { fadeIn } from '../variants'
 
 const About = () => {
@@ -65,10 +66,13 @@ const About = () => {
               </div>
             </div>
             <div className='flex gap-x-8 items-center'>
-              <button className='btn btn-lg'>Entre em contato</button>
-              <a className='text-gradient btn-link' href="#">
-                Meu Portfólio
-              </a>
+            <button className='btn btn-sm'>
+                <Link 
+                  to='contact'
+                  smooth={true}
+                  spy={true}>
+                  Entre em contato</Link>
+              </button>
             </div>
           </motion.div>
         </div>

@@ -1,8 +1,10 @@
 import React from 'react';
 
-import { BsArrowUpRight } from 'react-icons/bs'
+// import { BsArrowUpRight } from 'react-icons/bs';
 
-import { motion } from 'framer-motion'
+import { motion } from 'framer-motion';
+
+import { Link } from 'react-scroll';
 
 import { fadeIn } from '../variants'
 
@@ -25,7 +27,7 @@ const services = [
     link: 'Veja mais',
   },
   { 
-    name: 'Banco de Dados, API e Integrações', 
+    name: 'Desenvolvimento FullStack', 
     description: 'Curso WebModerno na Udemy com o Leonardo Leitão da Cod3r e também no Curso de FullStack PHP do Robson Leite da UpInside',
     link: 'Veja mais',
   },
@@ -46,7 +48,13 @@ const Services = () => {
             <h3 className='h3 max-w-[455px] mb-16'>
               Sou um Desenvolvedor iniciante no mercado e espero entrar na área com meus conhecimentos adquiridos
             </h3>
-            <button className='btn btn-sm'>Veja meus Trabalhos</button>
+            <button className='btn btn-sm'>
+                <Link 
+                  to='work'
+                  smooth={true}
+                  spy={true}>
+                  Veja meus trabalhos</Link>
+              </button>
           </motion.div>
           <motion.div 
             variants={fadeIn('left', 0.5)}
@@ -56,7 +64,7 @@ const Services = () => {
             className='flex-1 '>
             <div>
               {services.map((service, index)=> {
-                const {name, description, link} = service;
+                const {name, description} = service;
                 return (
                     <div className='border-b border-white/20 h-[140px] mb-[38px] flex' key={index}>
                       <div className='max-w-[476px]'>

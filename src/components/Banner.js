@@ -3,6 +3,9 @@ import Image from '../assets/avatar.png';
 import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import { TypeAnimation } from 'react-type-animation';
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
+
+
 import { fadeIn } from '../variants'
 
 const Banner = () => {
@@ -27,9 +30,9 @@ const Banner = () => {
               className='mb-6 text-[36px] lg:text[50px] font-secondary font-semibold uppercase leading-[1]'>
                 <span className='text-white mr-4'>Eu sou um</span>
                 <TypeAnimation sequence={[
-                  'Developer', 2000,
+                  'Desenvolvedor', 2000,
                   'Designer', 2000,
-                  // 'Dad', 2000,
+                  'Pai', 2000,
                 ]}
                 speed={50} 
                 className='text-accent'
@@ -51,8 +54,13 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{once: false, amount: 0.7}}
               className='flex max-w-max gap-x-6 items-center mb-12 mx-auto lg:mx-0'>
-              <button className='btn btn-lg'>Entre em contato</button>
-              <a href='#' className='text-gradient btn-link'>Meu Portfólio</a>
+              <button className='btn btn-sm'>
+                <Link 
+                  to='contact'
+                  smooth={true}
+                  spy={true}>
+                  Entre em contato</Link>
+              </button>
             </motion.div>
             <motion.div 
               variants={fadeIn('up', 0.7)} 
@@ -60,13 +68,13 @@ const Banner = () => {
               whileInView={'show'}
               viewport={{once: false, amount: 0.7}}
               className='flex text-[20px] gap-x-6 max-w-max mx-auto lg:mx-0'>
-              <a href='#'>
+              <a href='https://github.com/leandrokate' target='_blank' rel="noreferrer">  
                 <FaGithub />
               </a>
-              <a href='#'>
+              <a href='https://www.linkedin.com/in/lesouzacunha/' target='_blank' rel="noreferrer">
                 <FaLinkedin />
               </a>
-              <a href='#'>
+              <a href='https://www.instagram.com/lesouzacunha/' target='_blank' rel="noreferrer">
                 <FaInstagram />
               </a>
             </motion.div>
